@@ -1,0 +1,144 @@
+:root {
+  --background-color: #0d0b1a;
+  --text-color: #e0e0ff;
+  --color1: #1a1625;
+  --color2: #8b5cf6;
+  --color3: #00bcd4;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: var(--color1);
+  padding: 20px;
+  text-align: center;
+}
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li a {
+  list-style: none;
+  margin: 10px 15px;
+  padding: 0 15px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+}
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: var(--color1);
+  border-radius: 5px;
+}
+.profile {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px;
+}
+.profile .mrs img {
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.profile .mls {
+  margin-top: 30px;
+  text-align: left;
+}
+.profile .mls h2 {
+  margin-top: 60px;
+}
+.profile .mls p {
+  margin-top: 40px;
+}
+.mls button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  display: block;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.mls button.S1 {
+  background-color: var(--color2);
+  color: #fff;
+}
+.mls button.S2 {
+  background-color: var(--color3);
+  color: #fff;
+}
+.mls button:hover {
+  opacity: 0.8;
+}
+.ms h2 {
+  text-align: left;
+}
+.ms p {
+  text-align: center;
+  margin-top: 20px;
+}
+.ms img {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 🔹 3 صور في الصف */
+  gap: 20px; /* 🔹 مسافة بين الصور */
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.work-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.work-gallery img:hover {
+  transform: scale(1.05); /* 🔹 تكبر الصورة شوي */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+details {
+  background: #1a1a1a; /* خلفية غامقة */
+  color: #d1d5db; /* لون النص */
+  border-radius: 10px; /* زوايا دائرية */
+  padding: 10px 15px; /* مسافة داخلية */
+  margin: 10px 0; /* مسافة بين كل عنصر */
+  transition: all 0.3s ease; /* حركة ناعمة */
+}
+
+summary {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c084fc; /* بنفسجي جميل */
+  cursor: pointer; /* يظهر شكل اليد عند التمرير */
+}
+
+details[open] {
+  background: #2a2a2a; /* لون مختلف لما يكون مفتوح */
+  box-shadow: 0 0 10px #c084fc33; /* تأثير ضوء بنفسجي */
+}
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
